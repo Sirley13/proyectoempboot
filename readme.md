@@ -4,7 +4,7 @@ Esta pagina te  ayudará a definir tus habilidades de emprendedurismo y te guiar
 # Fundamentación del proyecto 
 
 Este proyecto nace a raiz de la gran cantidad de emprendedores que dia a dia tratan de obtener ayuda con sus negocios particulares, o estan lidiando con problematicas de diversificacion o reestructuracion de las mismas.
- Existen personas que desean emprender pero dudan de si tienen la determinacion para el proyecto
+ Existen personas que desean emprender pero dudan de si tienen la determinacion para el proyecto.
 
 
 # Integrantes del proyecto 
