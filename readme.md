@@ -1,9 +1,10 @@
 # Descripción básica del proyecto 
-Agregar una descripción basica del proyecto 
+Esta pagina te  ayudará a definir tus habilidades de emprendedurismo y te guiara a obtener una optima utilizaciion de tus recursos.
 
 # Fundamentación del proyecto 
 
-Agregar una fundamentacion breve del porqué se realiza el proyecto o que problematica soluciona 
+Este proyecto nace a raiz de la gran cantidad de emprendedores que dia a dia tratan de obtener ayuda con sus negocios particulares, o estan lidiando con problematicas de diversificacion o reestructuracion de las mismas.
+ Existen personas que desean emprender pero dudan de si tienen la determinacion para el proyecto
 
 
 # Integrantes del proyecto 
