@@ -8,9 +8,11 @@ Este proyecto nace a raiz de la gran cantidad de emprendedores que dia a dia tra
 
 
 # Integrantes del proyecto 
-* Nombre del primer integrante y @usuario en github
-* Nombre del segundo integrante y @usuario en github 
-* Nombre del tercer integrante,y @usuario en github y asi sucesivamente 
+* Sirley Castillo     @Sirley13 github
+* Leidy Recalde       @leidyRecalde github
+* Marlucy Araujo      @Marlu47 github
+* Hermelinda Bogarin  @melibogarin github 
+* Judit Benitez       @anahibdo github  
 
 
 
@@ -19,11 +21,6 @@ Este proyecto nace a raiz de la gran cantidad de emprendedores que dia a dia tra
 * Python 3.6
 * Virtualenv
 * Flask 1.0.2 
-
-## Requerimientos de Hardware ( Por ejemplo ) 
-* Raspberry Pi
-* Otras tecnologias usadas (por ej: Sensores, etc ) 
-
 
 
 ## Instación ( Por ejemplo )
