@@ -18,12 +18,12 @@ def index(request):
 
     return render(request, 'index.html',persona)
 
-def tarea(request):
-    return HttpResponse("hacete la vista gorda")
+def test(request):
+    return render(request, 'shop.html')
 
 #crear la vista / 
 def tare(request):
     return HttpResponse("cuando la mentira es la verdad")
 
-def inform(request):
-    return HttpResponse("la respuesta a todas tus preguntas")
+# def inform(request):
+#     return HttpResponse("la respuesta a todas tus preguntas")
