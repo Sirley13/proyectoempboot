@@ -22,6 +22,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'), #Creamos la ruta raiz '' y la enlazamos con nuestra vista index del archivo views.py
     path("test", views.test),
+    path("pag2", views.pagina2),
+    path("pag3", views.pagina3),
+    path("pag4", views.pagina4)
+
+
     # path("tareas", views.tarea),
     #path("inform", views.inform),
     #path("inicio", views.index) #la palabra adherida debe coincidir con la palabra que vamos a poner en la pagina con la barra 

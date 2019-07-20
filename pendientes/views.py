@@ -18,8 +18,6 @@ def index(request):
 
     return render(request, 'index.html',persona)
 
-def test(request):
-    return HttpResponse("hacete la vista gorda")
 
 #crear la vista / 
 def encuesta(request):
@@ -28,3 +26,16 @@ def encuesta(request):
 
 def inform(request):
     return HttpResponse("la respuesta a todas tus preguntas")
+
+def test(request):
+    return render(request, 'pag2.html')
+
+def pagina2(request):
+    return render(request, 'pag3.html')
+
+
+def pagina3(request):
+    return render(request, 'pag4.html')
+
+def pagina4(request):
+    return render(request, 'pag5.html')
