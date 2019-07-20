@@ -16,7 +16,7 @@ def index(request):
     "lista_tareas":listita
     }
 
-    return render(request, 'inicio.html',persona)
+    return render(request, 'index.html',persona)
 
 def tarea(request):
     return HttpResponse("hacete la vista gorda")
