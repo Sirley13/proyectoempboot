@@ -27,15 +27,13 @@ def encuesta(request):
 def inform(request):
     return HttpResponse("la respuesta a todas tus preguntas")
 
-def test(request):
-    return render(request, 'pag2.html')
 
 def pagina2(request):
-    return render(request, 'pag3.html')
+    return render(request, 'pag2.html')
 
 
 def pagina3(request):
-    return render(request, 'pag4.html')
+    return render(request, 'pag3.html')
 
 def pagina4(request):
-    return render(request, 'pag5.html')
+    return render(request, 'pag4.html')
