@@ -53,3 +53,5 @@ def pagina4(request):
     print(ideas)
     return render(request, 'pag4.html', {'ideas':ideas})
     
+def pagina5(request):
+    return render(request, 'pag5.html')
