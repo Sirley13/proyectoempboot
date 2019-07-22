@@ -32,10 +32,26 @@ def inform(request):
 
 def pagina2(request):
     return render(request, 'pag2.html')
-
-
+datos={}
 def pagina3(request):
+    data=request.POST.copy()
+    nombre=data.get('nombre')
+    datos['nombre']=nombre
+    email=data.get('email')
+    datos['email']=email
+    telefono=data.get('telefono')
+    datos['telefono']=telefono
+    preguntas=Pregunta.objects.all()
     return render(request, 'pag3.html')
 
 def pagina4(request):
-    return render(request, 'pag4.html')
+    ideas=[]
+    data=request.POST.copy()
+    ideas.append(data.get('idea1'))
+    ideas.append(data.get('idea2'))
+    ideas.append(data.get('idea3'))
+    ideas.append(data.get('idea4'))
+    ideas.append(data.get('idea5'))
+    print(ideas)
+    return render(request, 'pag4.html', {'ideas':ideas})
+    
