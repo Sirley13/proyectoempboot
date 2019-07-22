@@ -20,6 +20,8 @@ def index(request):
 
 
 #crear la vista / 
+
+
 def encuesta(request):
     pregunta1= ""
     return render(request, "encuesta.html")
