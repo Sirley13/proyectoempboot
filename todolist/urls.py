@@ -23,7 +23,8 @@ urlpatterns = [
     path('', views.index, name='index'), #Creamos la ruta raiz '' y la enlazamos con nuestra vista index del archivo views.py
     path("pag2", views.pagina2),
     path("pag3", views.pagina3),
-    path("pag4", views.pagina4)
+    path("pag4", views.pagina4),
+    path("encuesta", views.encuesta),
 
 
     # path("tareas", views.tarea),

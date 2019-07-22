@@ -75,40 +75,25 @@
 
     <div class="site-blocks-cover" style="background-image: url({% static "images/imagen1.jpeg" %});" >
       <div class="container">
-        <div class="row" style="float:right">
+        <div class="row">
           <div class="col-lg-7 mx-auto order-lg-2 align-self-end">
             <div class="site-block-cover-content text-center">
-                <form action="/my-handling-form-page" method="post">
-                <div>
-                  <label for="pregunta0">Pregunta0:</label>
-                  <input tipe="text" id="pregunta0"/>
-
-                  <div>
-                      <label for="pregunta1">Pregunta1:</label>
-                      <input tipe="text" id="pregunta1"/>
-
-                      <div>
-                          <label for="pregunta2">Pregunta2:</label>
-                          <input tipe="text" id="pregunta2"/>
-
-                          <div>
-                              <label for="pregunta3">Pregunta3:</label>
-                              <input tipe="text" id="pregunta3"/>
-
-                              <div>
-                                  <label for="pregunta4">Pregunta4:</label>
-                                  <input tipe="text" id="pregunta4"/>
-
-                                  <div>
-                                      <label for="pregunta5">Pregunta5:</label>
-                                      <input tipe="text" id="pregunta5"/>
-
-                                      <div>
-                                          <label for="pregunta6">Pregunta6:</label>
-                                          <input tipe="text" id="pregunta6"/>
+                <form action='/pag4' class="form-signin" method="POST">
+                  {% csrf_token %}
+                  <h5 class="h3 mb-3 font-weight-normal" style="color: black;background-color:#ffc107">Introduzca 5 ideas</h5>
+                  <label for="idea1" class="sr-only">Idea 1</label>
+                  <input type="text" id="idea1" class="form-control" placeholder="Idea" required name="idea1">
+                  <label for="idea2" class="sr-only">Idea 2</label>
+                  <input type="text" id="idea2" class="form-control" placeholder="Idea" required name="idea2">
+                  <label for="idea3" class="sr-only">Idea 3</label>
+                  <input type="text" id="idea3" class="form-control" placeholder="Idea" required name="idea3">
+                  <label for="idea4" class="sr-only">Idea 4</label>
+                  <input type="text" id="idea4" class="form-control" placeholder="Idea" required name="idea4">
+                  <label for="idea5" class="sr-only">Idea 5</label>
+                  <input type="text" id="idea5" class="form-control" placeholder="Idea" required name="idea5">
+                  <button class="btn btn-lg btn-warning btn-block" type="submit">Enviar</button>
+                  <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
                 </form>
-
-
 
 
 
