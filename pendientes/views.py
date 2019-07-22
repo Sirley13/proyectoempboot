@@ -27,19 +27,21 @@ def encuesta(request):
 def inform(request):
     return HttpResponse("la respuesta a todas tus preguntas")
 
-def test(request):
-    return render(request, 'pag2.html')
 
 def pagina2(request):
-    return render(request, 'pag3.html')
+    return render(request, 'pag2.html')
 
 
 def pagina3(request):
+<<<<<<< HEAD
     nombre = request.POST.get("nombre")
     print(nombre)
     mail = request.POST.get("mail")
     print(mail)
     return render(request, 'pag4.html')
+=======
+    return render(request, 'pag3.html')
+>>>>>>> 97cde4e42a31a8c32322b18a1f61f5856f36e5f8
 
 def pagina4(request):
-    return render(request, 'pag5.html')
+    return render(request, 'pag4.html')

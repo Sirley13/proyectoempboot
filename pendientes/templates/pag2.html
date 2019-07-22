@@ -73,9 +73,28 @@
       </div>
     </div>
 
-    <div class="site-blocks-cover" style="background-image: url({% static "images/imagen1.jpeg" %});" >
+    <div class="site-blocks-cover" style="background-image: url({% static "images/logo.png" %}); "height="150" width="150" >
       <div class="container">
         <div class="row" style="float:right">
+          <form action="/pag3" method="post">
+            <div>
+              <label for="nombre">Nombre:</label>
+              <input tipe="text" name="nombre"/>
+              
+            </div>
+            <div>
+              <label for="mail">Email:</label>
+              <input type="email" name="mail"/>
+            </div>
+            {% csrf_token %}
+            <div class="button">
+                <button type="submit">Send your message</button>
+            </div>
+          </form>
+            
+
+
+</form>
           <div class="col-lg-7 mx-auto order-lg-2 align-self-end">
             <div class="site-block-cover-content text-center">
               <h2 class="sub-title">vaciooo</h2>
