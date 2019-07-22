@@ -23,6 +23,7 @@ urlpatterns = [
     path("pag2", views.pagina2),
     path("pag3", views.pagina3),
     path("pag4", views.pagina4),
+    path("pag5", views.pagina5),
     path("encuesta", views.encuesta),
     path("diccionario", views.diccionario),
 

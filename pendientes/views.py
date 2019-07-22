@@ -36,8 +36,9 @@ def inform(request):
 
 
 def pagina2(request):
+    datos={}
     return render(request, 'pag2.html')
-datos={}
+
 def pagina3(request):
 
     nombre = request.POST.get("nombre")
@@ -69,3 +70,5 @@ def pagina4(request):
     print(ideas)
     return render(request, 'pag4.html', {'ideas':ideas})
     
+def pagina5(request):
+    return render(request, 'pag5.html')
