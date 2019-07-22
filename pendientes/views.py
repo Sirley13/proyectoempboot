@@ -35,6 +35,10 @@ def pagina2(request):
 
 
 def pagina3(request):
+    nombre = request.POST.get("nombre")
+    print(nombre)
+    mail = request.POST.get("mail")
+    print(mail)
     return render(request, 'pag4.html')
 
 def pagina4(request):
