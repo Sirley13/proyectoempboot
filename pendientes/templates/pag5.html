@@ -72,14 +72,11 @@
         </div>
         <form action='/pag3' class="form-signin" method="POST">
           {% csrf_token %}
-          <h5 class="h3 mb-3 font-weight-normal" style="color: black">Tu idea de negocio responde a una necesidad? Puntua tus ideas de acuerdo a la prioridad</h5>
-          <input type="radio" name="gender" value="1"> 1 <br>
-          <input type="radio" name="gender" value="2"> 2 <br>
-          <input type="radio" name="gender" value="3"> 3 <br>
-          <input type="radio" name="gender" value="4"> 4 <br>
-          <input type="radio" name="gender" value="5"> 5 <br>
+          <h5 class="h3 mb-3 font-weight-normal" style="color: black">Tu idea de negocio responde a una necesidad? Puntuas tus ideas de acuerdo a la prioridad</h5>
+        
           <label for="email" class="sr-only">Email:</label>
-          <br>
+          <input type="text" id="email" class="form-control" placeholder="Respuesta" required autofocus name="email">
+          
           {% for idea in ideas %} 
             <label for="idea" class="sr-only">{{idea}}</label>
           {% endfor %}

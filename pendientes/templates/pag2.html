@@ -43,20 +43,20 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="#" class="js-logo-clone"> <img src="{% static "images/logo.png" %}" height="100" width="100">Ikatu</a>
+              
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
-                <li class="active"><a href="index.html">Inicio</a></li>
+                <li class="active"><a href="/">Inicio</a></li>
                 <li><a href="test">Historia</a></li>
                 <li class="has-children">
                   <a href="#">¿quienes somos?</a>
                   <ul class="dropdown">
                     <li><a href="#">A cerca de</a></li>
-                <li><a href="about.html">Alcance</a></li>
-                <li><a href="contact.html">Contactanos</a></li>
+                <li><a href="about">Alcance</a></li>
+                <li><a href="contact">Contactanos</a></li>
               </ul>
             </nav>
           </div>
@@ -73,11 +73,12 @@
       </div>
     </div>
 
-    <div class="site-blocks-cover" style="background-image: url({% static "images/logo.png" %}); height="80" width="80" >
+    <div class="site-blocks-cover" style="background-image: url({% static "images/logo.png" %}); height="50" width="50" >
       <div class="container">
         <div class="row" style="float:right">
           <form action='/pag3' class="form-signin" method="POST">
             {% csrf_token %}
+            <li class="active"><a href="/">Inicio</a></li>
             <h5 class="h3 mb-3 font-weight-normal" style="color: black">Introduzca sus Datos</h5>
             <label for="email" class="sr-only">Email:</label>
             <input type="email" id="email" class="form-control" placeholder="Email" required autofocus name="email">

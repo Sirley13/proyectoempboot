@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
 from pendientes import views
 #from es desde tal carpeta traer a tal cosa, import es importar 
 urlpatterns = [
