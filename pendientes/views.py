@@ -20,6 +20,8 @@ def index(request):
 
 
 #crear la vista / 
+
+
 def encuesta(request):
     pregunta1= ""
     return render(request, "encuesta.html")
@@ -30,9 +32,9 @@ def inform(request):
 
 def pagina2(request):
     return render(request, 'pag2.html')
-
-
+datos={}
 def pagina3(request):
+<<<<<<< HEAD
 <<<<<<< HEAD
     nombre = request.POST.get("nombre")
     print(nombre)
@@ -40,8 +42,27 @@ def pagina3(request):
     print(mail)
     return render(request, 'pag4.html')
 =======
+=======
+    data=request.POST.copy()
+    nombre=data.get('nombre')
+    datos['nombre']=nombre
+    email=data.get('email')
+    datos['email']=email
+    telefono=data.get('telefono')
+    datos['telefono']=telefono
+    preguntas=Pregunta.objects.all()
+>>>>>>> b7fbbd92d4e3af20836b5172bd4eb56531d7fe4f
     return render(request, 'pag3.html')
 >>>>>>> 97cde4e42a31a8c32322b18a1f61f5856f36e5f8
 
 def pagina4(request):
-    return render(request, 'pag4.html')
+    ideas=[]
+    data=request.POST.copy()
+    ideas.append(data.get('idea1'))
+    ideas.append(data.get('idea2'))
+    ideas.append(data.get('idea3'))
+    ideas.append(data.get('idea4'))
+    ideas.append(data.get('idea5'))
+    print(ideas)
+    return render(request, 'pag4.html', {'ideas':ideas})
+    
