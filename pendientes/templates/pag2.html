@@ -76,20 +76,18 @@
     <div class="site-blocks-cover" style="background-image: url({% static "images/logo.png" %}); "height="250" width="250" >
       <div class="container">
         <div class="row" style="float:right">
-          <form action="/pag3" method="post">
-            <div>
-              <label for="nombre">Nombre:</label>
-              <input tipe="text" name="nombre"/>
-              
-            </div>
-            <div>
-              <label for="mail">Email:</label>
-              <input type="email" name="mail"/>
-            </div>
+          <form action='/pag3' class="form-signin" method="POST">
             {% csrf_token %}
-            <div class="button">
-                <button type="submit">Send your message</button>
-            </div>
+            <h5 class="h3 mb-3 font-weight-normal" style="color: black">Introduzca sus Datos</h5>
+            <label for="email" class="sr-only">Email:</label>
+            <input type="email" id="email" class="form-control" placeholder="Email" required autofocus name="email">
+            <label for="nombre" class="sr-only">Nombre</label>
+            <input type="text" id="nombre" class="form-control" placeholder="Nombre" required name="nombre">
+            <label for="telefono" class="sr-only">Telefono</label>
+            <input type="text" id="telefono" class="form-control" placeholder="Telefono" required name="telefono">
+            
+            <button class="btn btn-lg btn-warning btn-block" type="submit">Enviar</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
           </form>
             
 
