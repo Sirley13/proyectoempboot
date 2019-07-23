@@ -20,10 +20,17 @@ from pendientes import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'), #Creamos la ruta raiz '' y la enlazamos con nuestra vista index del archivo views.py
+    path("pag1", views.pagina1),
     path("pag2", views.pagina2),
     path("pag3", views.pagina3),
     path("pag4", views.pagina4),
     path("pag5", views.pagina5),
+    path("pag6", views.pagina6),
+    path("pag7", views.pagina7),
+    path("pag8", views.pagina8),
+    path("pag9", views.pagina9),
+    path("pag10", views.pagina10),
+    path("pag11", views.pagina11),
     path("encuesta", views.encuesta),
     path("diccionario", views.diccionario),
 

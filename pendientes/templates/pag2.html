@@ -43,7 +43,7 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              
+              <a href="#" class="js-logo-clone"> <img src="{% static "images/logo.png" %}" height="100" width="100">Ikatu</a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
@@ -62,7 +62,7 @@
           </div>
           <div class="icons">
             <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
-            <a href="cart.html" class="icons-btn d-inline-block bag">
+            <a href="cart" class="icons-btn d-inline-block bag">
               <span class="icon-shopping-bag"></span>
               <span class="number">2</span>
             </a>
@@ -73,24 +73,32 @@
       </div>
     </div>
 
-    <div class="site-blocks-cover" style="background-image: url({% static "images/logo.png" %}); height="50" width="50" >
+    <div class="site-blocks-cover" style="background-image: url({% static "images/chiques.jpg" height="70" width="70" %});" >
       <div class="container">
-        <div class="row" style="float:right">
-          <form action='/pag3' class="form-signin" method="POST">
-            {% csrf_token %}
-            <li class="active"><a href="/">Inicio</a></li>
-            <h5 class="h3 mb-3 font-weight-normal" style="color: black">Introduzca sus Datos</h5>
-            <label for="email" class="sr-only">Email:</label>
-            <input type="email" id="email" class="form-control" placeholder="Email" required autofocus name="email">
-            <label for="nombre" class="sr-only">Nombre</label>
-            <input type="text" id="nombre" class="form-control" placeholder="Nombre" required name="nombre">
-            <label for="telefono" class="sr-only">Telefono</label>
-            <input type="text" id="telefono" class="form-control" placeholder="Telefono" required name="telefono">
-            
-            <button class="btn btn-lg btn-warning btn-block" type="submit">Enviar</button>
-            <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
-            <div class="button">
-                <button type="submit">enviar</button>
+        <div class="row">
+          <div class="col-lg-7 mx-auto order-lg-2 align-self-end">
+            <div class="site-block-cover-content text-center">
+              <form action="/pag3" method="post">   
+                  {% csrf_token %}
+                  <h5 class="h3 mb-3 font-weight-normal" style="color: black;background-color:#ffc107">Introduzca 5 ideas</h5>
+                  <label for="idea1" class="sr-only">Idea 1</label>
+                  <input type="text" id="idea1" class="form-control" placeholder="Idea" required name="idea1">
+                  <label for="idea2" class="sr-only">Idea 2</label>
+                  <input type="text" id="idea2" class="form-control" placeholder="Idea" required name="idea2">
+                  <label for="idea3" class="sr-only">Idea 3</label>
+                  <input type="text" id="idea3" class="form-control" placeholder="Idea" required name="idea3">
+                  <label for="idea4" class="sr-only">Idea 4</label>
+                  <input type="text" id="idea4" class="form-control" placeholder="Idea" required name="idea4">
+                  <label for="idea5" class="sr-only">Idea 5</label>
+                  <input type="text" id="idea5" class="form-control" placeholder="Idea" required name="idea5">
+                  <button class="btn btn-lg btn-warning btn-block" type="submit">Enviar</button>
+                  <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+                </form>
             </div>
-          </form>
-            
+            </div>
+           </div>
+          </div>
+       </div>
+       </div>
+    </body>
+    </html>

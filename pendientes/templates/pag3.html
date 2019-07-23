@@ -70,43 +70,123 @@
                 class="icon-menu"></span></a>
           </div>
         </div>
+        <div class="site-blocks-cover" style="background-image: url({% static "images/nenis.jpg" height="80" width="80"%});" >
+          <div class="container">
+            <div class="row" style="float:right">
+              <div class="col-lg-7 mx-auto order-lg-2 align-self-end">
+                <div class="site-block-cover-content text-center">
+                
+        <form action='/pag4' class="form-signin" method="POST">
+          {% csrf_token %}
+          <h5 class="h3 mb-3 font-weight-normal" style="color: black">Tu idea de negocio responde a una necesidad? Puntua tus ideas de acuerdo a la prioridad</h5>
+          <fieldset>
+              <legend>{{ideas.0}}</legend> <!--aqui se escribe las ideas que el usuario escribio-->
+              <label>
+                  <input type="radio" name="numero1" value="1"> 1
+              </label>
+              <label>
+                  <input type="radio" name="numero1" value="2"> 2
+              </label>
+              <label>
+                  <input type="radio" name="numero1" value="3"> 3
+              </label>
+              <label>
+                  <input type="radio" name="numero1" value="3"> 4
+              </label>
+              <label>
+                  <input type="radio" name="numero1" value="5"> 5 <!--para que esto se pueda so=eleccionar solamente uno, name tiene que ser igual a todo-->
+              </label>
+          </fieldset>
+          <fieldset>
+              <legend>{{ideas.1}}</legend>
+              <label>
+                  <input type="radio" name="numero2" value="1"> 1
+              </label>
+              <label>
+                  <input type="radio" name="numero2" value="2"> 2
+              </label>
+              <label>
+                  <input type="radio" name="numero2" value="3"> 3
+              </label>
+              <label>
+                  <input type="radio" name="numero2" value="3"> 4
+              </label>
+              <label>
+                  <input type="radio" name="numero2" value="5"> 5
+              </label>
+          </fieldset>
+          <fieldset>
+              <legend>{{ideas.2}}</legend>
+              <label>
+                  <input type="radio" name="numero3" value="1"> 1
+              </label>
+              <label>
+                  <input type="radio" name="numero3" value="2"> 2
+              </label>
+              <label>
+                  <input type="radio" name="numero3" value="3"> 3
+              </label>
+              <label>
+                  <input type="radio" name="numero3" value="3"> 4
+              </label>
+              <label>
+                  <input type="radio" name="numero3" value="5"> 5
+              </label>
+          </fieldset>
+          <fieldset>
+              <legend>{{ideas.3}}</legend>
+              <label>
+                  <input type="radio" name="numero4" value="1"> 1
+              </label>
+              <label>
+                  <input type="radio" name="numero4" value="2"> 2
+              </label>
+              <label>
+                  <input type="radio" name="numero4" value="3"> 3
+              </label>
+              <label>
+                  <input type="radio" name="numero4" value="3"> 4
+              </label>
+              <label>
+                  <input type="radio" name="numero4" value="5"> 5
+              </label>
+          </fieldset>
+          <fieldset>
+              <legend>{{ideas.4}}</legend>
+              <label>
+                  <input type="radio" name="numero5" value="1"> 1
+              </label>
+              <label>
+                  <input type="radio" name="numero5" value="2"> 2
+              </label>
+              <label>
+                  <input type="radio" name="numero5" value="3"> 3
+              </label>
+              <label>
+                  <input type="radio" name="numero5" value="3"> 4
+              </label>
+              <label>
+                <input type="radio" name="numero5" value="5"> 5
+              </label>
+          </fieldset>
+      
+          <label for="email" class="sr-only">Email:</label>
+          <br>
+          {% for idea in ideas %} 
+            <label for="idea" class="sr-only">{{idea}}</label>
+          {% endfor %}
+          
+          <button class="btn btn-lg btn-warning btn-block" type="submit">Enviar</button>
+          <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+        </form>
       </div>
     </div>
-
-    <div class="site-blocks-cover" style="background-image: url({% static "images/imagen1.jpeg" height="70" width="70" %});" >
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7 mx-auto order-lg-2 align-self-end">
-            <div class="site-block-cover-content text-center">
-              <form action="/pag4/" method="post">   
-                  {% csrf_token %}
-                  <h5 class="h3 mb-3 font-weight-normal" style="color: black;background-color:#ffc107">Introduzca 5 ideas</h5>
-                  <label for="idea1" class="sr-only">Idea 1</label>
-                  <input type="text" id="idea1" class="form-control" placeholder="Idea" required name="idea1">
-                  <label for="idea2" class="sr-only">Idea 2</label>
-                  <input type="text" id="idea2" class="form-control" placeholder="Idea" required name="idea2">
-                  <label for="idea3" class="sr-only">Idea 3</label>
-                  <input type="text" id="idea3" class="form-control" placeholder="Idea" required name="idea3">
-                  <label for="idea4" class="sr-only">Idea 4</label>
-                  <input type="text" id="idea4" class="form-control" placeholder="Idea" required name="idea4">
-                  <label for="idea5" class="sr-only">Idea 5</label>
-                  <input type="text" id="idea5" class="form-control" placeholder="Idea" required name="idea5">
-                  <button class="btn btn-lg btn-warning btn-block" type="submit">Enviar</button>
-                  <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
-                </form>
-
-
-
-
-
-
-
-
-
-
-              <h2 class="sub-title">vaciooo</h2>
-              <h1>historias</h1>
-              <p>
-                <a href="pag4" class="btn btn-primary px-5 py-3">vacio</a>
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </body>
+    </html>
