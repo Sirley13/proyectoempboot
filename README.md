@@ -1,89 +1,31 @@
-# Django TODO template
+Descripción básica del proyecto
+Es una pagina web para todas las personas que queran emprender, que tienen ideas pero no saben cual elegir. Basicamente,el usuario podra evaluar sus ideas, saber su viabilidad y el tiempo le tomara deasarrollarla. Todo esto, con preguntas sensillas que les dara un resultado. 
 
-### Cosas que no vamos a ver aca pero que estaria bueno que investiguen
+Fundamentación del proyecto
+Pensamos en esta herramienta, ya que vimos una necesidad en comun en nuestras comunidades. De esta manera, podriamos facilitar y fomentar en emprendedurismo, y a la vez al desarrollo de la economia del pais. 
 
-* Configurar bases de datos
-* instalar y correr todo en un `virtualenv`
-* deployment correcto con un servidor
-* Correcto manejo de URLs entre distintas apps
+Integrantes del proyecto
+Anahi Benitez  @anahibdo
+Sirley Castillo y @Sirley13 
+Hermelinda Bogarin,y @Melybogarin 
+Leidy Recalde @leidyRecalde
+Marlucy Araujo @Marlu47
 
-### Pasos que se siguieron para llegar a este punto
-* En la terminal:
-```bash
-pip3 install django==2.2 #instalamos django con pip(manejador de paquetes de python)
-django-admin startproject todolist #creamos el proyecto todolist
-cd todolist #entramos al directorio
-python3 manage.py startapp pendientes #se crea la app pendientes(un proyecto puede tener muchas apps)
-#todolist/settings.py -> agregar 'pendientes' a installed apps
-#pendientes/models.py -> Crear modelo/tabla Tarea
-#pendientes/models.py -> Registar modelo Tarea en la interfaz de Administracion
-python3 manage.py makemigrations #se crea el archivo de migracion de base de datos
-python3 manage.py migrate #guardamos los cambios en la base de datos(archivo db.sqlite3)
-python3 manage.py createsuperuser #se crea un usuario administrador, en este caso admin:admin
+Requirimientos de software 
+Python 3.6
+DJango
 
-python3 manage.py runserver #corremos el servidor de desarrollo
-# Abrir el navegador en http:localhost:8000
-# http:localhost:8000/admin para la interfaz de administracion
-```
+Instación 
+git clone https://github.com/Sirley13/proyectoempboot 
+cd proyectoempboot
+pip install -r requirements.txt
 
-* en `todolist/settings.py`:
-  * se agrega `'pendientes'` a `INSTALLED_APPS`
-  * se cambia el idioma a español
+Corriendo el servidor
+Para sistemas operativos Linux
+python3 manage.py runserver 
 
-```python
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'pendientes' #esta linea es la que agregamos
-]
-```
-```python
-LANGUAGE_CODE = 'es'
-``` 
+Para sistems operativos Windows
+python manage.py runserver 
 
-* en `pendientes/models.py` creamos el modelo Tarea (modelo ~= tabla de la base de datos)
-
-```python
-class Tarea(models.Model):
-    titulo = models.CharField(max_length=100) #Campo/columna titulo de tipo "campo de caracteres" de longitud maxima de 100
-    descripcion = models.TextField(null=True, blank=True) #Campo/columna titulo de tipo Texto, los argumentos blank y null son para que el campo sea opcional
-    estado = models.BooleanField(default=False)
-```
-
-* en `pendientes/admin.py` registramos nuestro modelo para poder usarlo en la interfaz de administracion
-
-```python
-from django.contrib import admin
-from .models import Tarea #importamos el modelo
-
-admin.site.register(Tarea) #lo registramos
-
-```
-
-* en `pendientes/views.py`
-
-```python
-from django.http import HttpResponse
-
-def index(request):
-    saludo = "Hola, Mundo! Esta es la raiz /"
-    return HttpResponse(saludo) #retornamos el saludo
-```
-
-* en `todolist/urls.py`
-
-```python
-from pendientes import views #importamos las vistas de la app/directorio pendientes
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.index, name='index'), #Creamos la ruta raiz '' y la enlazamos con nuestra vista index del archivo views.py
-]
-
-```
-
-
+Licencia
+La licencia del proyecto esta bajo la licencia GNU General Public License v3.0 - Mirar LICENSE
